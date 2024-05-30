@@ -1,0 +1,277 @@
+/*
+Theme Name: Astra Child 4.semeksamen
+Theme URI: https://wpastra.com/
+Template: astra
+Author: Brainstorm Force
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra is fast, fully customizable &amp; beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL &amp; Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained &amp; Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog
+Version: 4.6.13.1717050015
+Updated: 2024-05-30 08:20:15
+
+*/
+
+/* */
+
+/* Font størrelse - regler for mobil på hele sitet */
+@media only screen and (max-width: 767px) {
+    .content {
+        font-size: 2rem !important;
+        padding-left: 0.25em;
+    }
+
+	h3{
+		font-size:35px;
+	}
+	
+	/*sørger for der ikke er så meget mellemrum mellem h1 og tekst på alle sider */ 
+	.entry-content .wp-block-columns h1 {
+  margin-bottom: -134px;
+}
+}
+	
+/*Forside banner - denne kode looper vores animation, så banneret kører uendeligt*/
+.outer {
+    overflow: hidden;  !important;
+}
+
+.outer div {
+    display: inline-block;
+}
+
+.loop {
+    white-space: nowrap;
+    animation: loop-anim 15s linear infinite;
+}
+
+/*Forside banner - denne kode looper vores animation, så banneret kører uendeligt - mobile regler*/
+@media only screen and (max-width: 767px) {
+    .loop {
+        animation: loop-anim 18.5s linear infinite;
+    }
+	}
+
+@keyframes loop-anim {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -50% 
+    }
+}
+
+label, legend {
+  color: #24220D;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+services-left {
+  display: none;
+  background: none;
+  padding: 10px;
+  color: white;
+}
+
+has-text-align {
+	text-align: center;
+}
+
+
+/*ændringer i CSS for bookingen*/ 
+
+/*rykke aflys knappen til venstre i stedet*/ 
+.cancel-reservation,
+modify-reservation {
+    float: left !important;
+}
+/*knappen har fået en rød hover*/ 
+a:hover,
+a:focus {
+  color:#CD0126;
+}
+
+/*teksten har fået farven sort*/ 
+
+.redi-restaurant-time-button, .redi-restaurant-button, .redi-restaurant-duration-button {
+  margin: 1px;
+  cursor: pointer;
+  border: 1px solid #d3d3d3;
+  background-color: #e6e6e6;
+  display: inline;
+  color: #24220D;
+}
+
+/*her vil jeg gerne fjerne den grønne baggrundsfarve og lave den transparent i stedet*/
+
+.services-left
+{
+    display: none;
+    background: transparent!important;
+    padding: 10px;
+    color: #2F2F2F!important;
+}
+
+/*her placerer vi billederne korrekt på Om Pio siden*/
+
+.wp-block-image1 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  margin-left: -105px;
+}
+
+.wp-block-image2 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  margin-left: 105px;
+}
+
+.wp-block-image3 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+  margin-left: -66px;
+}
+
+/*mobile regler for Om Pio sidens billeder*/
+@media only screen and (max-width: 767px) {
+	.wp-block-image1 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.wp-block-image2 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.wp-block-image3 img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+		.has-text-align1 {
+  margin-left: auto!important;
+  margin-right: auto!important;
+}
+
+}
+
+/*regler for at p på forsiden er i midten på computer*/
+@media only screen and (min-width: 1024px) {
+.has-text-align1 {
+	margin-left: 300px!important;
+	margin-right: 300px!important;
+}
+.has-text-align2 {
+	margin-left: 300px!important;
+	margin-right: 300px!important;
+}
+
+  }
+
+/*regler for kalenderen i mobil*/
+	@media only screen and (max-width: 800px){
+	.entry-content .wp-block-column-kalender {
+  margin-bottom: -20px;
+}
+}
+
+@media (min-width: 782px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[style*=flex-basis] {
+    flex-grow: 0;
+  }
+}
+
+.wp-block-columns.is-not-stacked-on-mobile {
+  flex-wrap: nowrap !important;
+}
+
+.wp-block-columns.is-not-stacked-on-mobile > .wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.wp-block-columns.is-not-stacked-on-mobile > .wp-block-column[style*=flex-basis] {
+  flex-grow: 0;
+}
+
+:where(.wp-block-columns) {
+  margin-bottom: 1.75em;
+}
+
+/* Denne regel sikrer stakning på mobile enheder */
+
+@media (max-width: 781px) {
+  .wp-block-columns {
+    flex-direction: column;
+  }
+ .wp-block-image2  img {
+  margin-left: 0px;
+}
+		.wp-block-image1  img {
+  margin-left: 0px;
+
+}
+			.wp-block-image3  img {
+  margin-left: 0px;
+}
+	
+/* Standard styles */
+.wp-block-columns.is-not-stacked-on-mobile {
+  display: flex;
+  flex-wrap: nowrap; /* Hold elementerne på samme linje */
+}
+
+.wp-block-columns.is-not-stacked-on-mobile .wp-block-column {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 781px) {
+  .wp-block-columns.is-not-stacked-on-mobile {
+    flex-direction: column; /* Stak elementerne lodret */
+  }
+
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-image1,
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-image2,
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-image3 {
+    order: 1; /* Billeder øverst */
+  }
+
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-heading {
+    order: 2; /* Overskrifter under billeder */
+  }
+
+  .wp-block-columns.is-not-stacked-on-mobile p {
+    order: 3; /* Afsnit under overskrifter */
+  }
+
+  .wp-block-columns.is-not-stacked-on-mobile .wp-block-buttons {
+    order: 4; /* Knapper under afsnit */
+  }
+}
+} 
+
